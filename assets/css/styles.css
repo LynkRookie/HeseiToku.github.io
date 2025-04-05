@@ -1337,6 +1337,17 @@
       grid-template-columns: 1fr;
       gap: 1.5rem;
     }
+    .carousel-controls {
+      position: absolute;
+      left: 0;
+      bottom: 23.5rem;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 10;
+      gap: 1rem;
+  }
   }
   
   /* Estilos para el menú móvil */
