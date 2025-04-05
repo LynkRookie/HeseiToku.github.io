@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HeseiToku - Series Tokusatsu en Español</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" href="assets/css/img/1.png" sizes="180x180" type="image/png">
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="menu-button mobile-only">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img src="assets/css/img/1.png" alt="" width="70" height="70">
+                        <span class="logo-text desktop-only">HeseiToku</span>
+                    </a>
+                </div>
+                <nav class="main-nav desktop-only">
+                    <a href="index.html" class="nav-link active">Inicio</a>
+                    <a href="assets/vista/super-sentai.html" class="nav-link">Super Sentai</a>
+                    <a href="assets/vista/kamen-rider.html" class="nav-link">Kamen Rider</a>
+                    <a href="assets/vista/ryukendo.html" class="nav-link">Ryukendo</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-button">
+                            Más Series
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="assets/vista/metal-hero.html" class="nav-link">Metal Heroes</a>
+                            <a href="assets/vista/ultraman.html" class="nav-link">Ultraman</a>
+                            <a href="assets/vista/garo.html" class="nav-link">Garo</a>
+                        </div>
+                    </div>
+                    <a href="assets/vista/calendario.html" class="nav-link">Calendario</a>
+                </nav>
+                <div class="header-right">
+                    <form class="search-form desktop-only">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="search" placeholder="Buscar series..." class="search-input">
+                    </form>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                        <span class="sr-only">Notifications</span>
+                    </button>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="sr-only">Profile</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+    <div class="hero-carousel">
+        <div class="hero-slide active">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Kamen+Rider+Geats')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Kamen Rider</div>
+                    <h1 class="hero-title">Kamen Rider Geats</h1>
+                    <p class="hero-description">
+                        La serie número 33 de Kamen Rider, que sigue a Ace Ukiyo mientras compite en el Desire Grand Prix, un
+                        juego de supervivencia donde los ganadores pueden tener cualquier deseo concedido.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Super+Sentai+2025')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Super Sentai</div>
+                    <h1 class="hero-title">Super Sentai 2025</h1>
+                    <p class="hero-description">
+                        La última temporada de Super Sentai, continuando la legendaria franquicia de héroes en equipo que ha cautivado a fans por décadas.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Ultraman+2025')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Ultraman</div>
+                    <h1 class="hero-title">Ultraman 2025</h1>
+                    <p class="hero-description">
+                        El gigante de luz regresa en una nueva aventura para proteger la Tierra de monstruos y amenazas extraterrestres.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Ryukendo')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Ryukendo</div>
+                    <h1 class="hero-title">Ryukendo</h1>
+                    <p class="hero-description">
+                        Madan Senki Ryukendo, una serie donde guerreros con armaduras luchan contra las fuerzas del mal para proteger a la humanidad.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Metal+Heroes')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Metal Heroes</div>
+                    <h1 class="hero-title">Metal Heroes</h1>
+                    <p class="hero-description">
+                        La legendaria franquicia de héroes metálicos, que incluye Space Sheriff Gavan, Sharivan, y muchos más.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slide">
+            <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Garo')"></div>
+            <div class="hero-overlay"></div>
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <div class="category-badge">Garo</div>
+                    <h1 class="hero-title">Garo</h1>
+                    <p class="hero-description">
+                        La historia de los Caballeros Makai y su lucha contra los Horrores para proteger a la humanidad en la oscuridad.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary">Ver ahora</button>
+                        <button class="btn btn-outline">Más información</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="carousel-controls">
+        <button class="carousel-arrow prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <div class="carousel-indicators"></div>
+        <button class="carousel-arrow next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+        </button>
+    </div>
+</div>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <div class="tabs-container">
+            <div class="tabs-header">
+                <div class="tabs-list">
+                    <button class="tab-button active" data-tab="recientes">Recientes</button>
+                    <button class="tab-button" data-tab="populares">Populares</button>
+                    <button class="tab-button" data-tab="super-sentai">Super Sentai</button>
+                    <button class="tab-button" data-tab="kamen-rider">Kamen Rider</button>
+                </div>
+                <a href="#" class="view-all">Ver todo</a>
+            </div>
+
+            <div class="tab-content active" id="recientes">
+                <div class="content-section">
+                    <h2 class="section-title">Episodios recientes</h2>
+                    <div class="series-grid">
+                        <!-- Series Cards -->
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Geats+45')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Kamen Rider Geats Ep. 45</h3>
+                                    <p class="card-subtitle">Kamen Rider Geats</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Geats+44')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Kamen Rider Geats Ep. 44</h3>
+                                    <p class="card-subtitle">Kamen Rider Geats</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Geats+43')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Kamen Rider Geats Ep. 43</h3>
+                                    <p class="card-subtitle">Kamen Rider Geats</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Geats+42')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Kamen Rider Geats Ep. 42</h3>
+                                    <p class="card-subtitle">Kamen Rider Geats</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Geats+41')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Kamen Rider Geats Ep. 41</h3>
+                                    <p class="card-subtitle">Kamen Rider Geats</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-section">
+                    <h2 class="section-title">Super Sentai</h2>
+                    <div class="series-grid">
+                        <!-- Super Sentai Cards -->
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=King-Ohger+35')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ohsama Sentai King-Ohger Ep. 35</h3>
+                                    <p class="card-subtitle">Ohsama Sentai King-Ohger</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=King-Ohger+34')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ohsama Sentai King-Ohger Ep. 34</h3>
+                                    <p class="card-subtitle">Ohsama Sentai King-Ohger</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=King-Ohger+33')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ohsama Sentai King-Ohger Ep. 33</h3>
+                                    <p class="card-subtitle">Ohsama Sentai King-Ohger</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=King-Ohger+32')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ohsama Sentai King-Ohger Ep. 32</h3>
+                                    <p class="card-subtitle">Ohsama Sentai King-Ohger</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="series-card">
+                            <a href="#" class="card-link">
+                                <div class="card-image-container">
+                                    <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=King-Ohger+31')"></div>
+                                    <div class="card-overlay"></div>
+                                    <div class="card-badge">Nuevo</div>
+                                </div>
+                                <div class="card-content">
+                                    <h3 class="card-title">Ohsama Sentai King-Ohger Ep. 31</h3>
+                                    <p class="card-subtitle">Ohsama Sentai King-Ohger</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="populares">
+                <div class="series-grid">
+                    <!-- Populares Cards -->
+                    <div class="series-card">
+                        <a href="#" class="card-link">
+                            <div class="card-image-container">
+                                <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Revice')"></div>
+                                <div class="card-overlay"></div>
+                                <div class="card-badge">Popular</div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Kamen Rider Revice Ep. 2</h3>
+                                <p class="card-subtitle">Kamen Rider Revice</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="series-card">
+                        <a href="#" class="card-link">
+                            <div class="card-image-container">
+                                <div class="card-image" style="background-image: url('https://via.placeholder.com/480x270?text=Donbrothers')"></div>
+                                <div class="card-overlay"></div>
+                                <div class="card-badge">Popular</div>
+                            </div>
+                            <div class="card-content">
+                                <h3 class="card-title">Avataro Sentai Donbrothers Ep. 1</h3>
+                                <p class="card-subtitle">Avataro Sentai Donbrothers</p>
+                            </div>
+                        </a>
+                    </div>
+                    <!-- Más tarjetas aquí -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="super-sentai">
+                <!-- Super Sentai Content -->
+                <div class="series-grid">
+                    <!-- Super Sentai Cards -->
+                </div>
+            </div>
+
+            <div class="tab-content" id="kamen-rider">
+                <!-- Kamen Rider Content -->
+                <div class="series-grid">
+                    <!-- Kamen Rider Cards -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-placeholder"></div>
+                        <span class="logo-text">Shadow Rangers</span>
+                    </a>
+                    <p class="footer-description">
+                        Shadow Rangers es un sitio dedicado a compartir series tokusatsu como Super Sentai, Kamen Rider, Metal
+                        Heroes, Ultraman y Garo con la comunidad hispanohablante.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Series</h3>
+                        <ul class="footer-menu">
+                            <li><a href="assets/vista/super-sentai.html">Super Sentai</a></li>
+                            <li><a href="assets/vista/kamen-rider.html">Kamen Rider</a></li>
+                            <li><a href="assets/vista/metal-heroes.html">Metal Heroes</a></li>
+                            <li><a href="assets/vista/ultraman.html">Ultraman</a></li>
+                            <li><a href="assets/vista/garo.html">Garo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Enlaces</h3>
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="assets/vista/calendario.html">Calendario</a></li>
+                            <li><a href="#">Foro</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Legal</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Términos de servicio</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> Shadow Rangers. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendario - HeseiToku</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" href="../css/img/1.png" sizes="180x180" type="image/png">
+
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="menu-button mobile-only">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img src="../css/img/1.png" alt="" width="70" height="70">
+
+                        <span class="logo-text desktop-only">HeseiToku</span>
+                    </a>
+                </div>
+                <nav class="main-nav desktop-only">
+                    <a href="../../index.html" class="nav-link">Inicio</a>
+                    <a href="super-sentai.html" class="nav-link">Super Sentai</a>
+                    <a href="kamen-rider.html" class="nav-link">Kamen Rider</a>
+                    <a href="metal-hero.html" class="nav-link">Metal Heroes</a>
+                    <a href="ultraman.html" class="nav-link">Ultraman</a>
+                    <a href="garo.html" class="nav-link">Garo</a>
+                    <a href="calendario.html" class="nav-link active">Calendario</a>
+                </nav>
+                <div class="header-right">
+                    <form class="search-form desktop-only">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="search" placeholder="Buscar series..." class="search-input">
+                    </form>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                        <span class="sr-only">Notifications</span>
+                    </button>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="sr-only">Profile</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <div class="page-header">
+            <h2 class="page-title">Calendario de Emisiones</h2>
+        </div>
+
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <h3 class="calendar-title">Abril 2025</h3>
+                <div class="calendar-nav">
+                    <button class="calendar-nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="calendar-nav-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="calendar-day-header">Domingo</div>
+                <div class="calendar-day-header">Lunes</div>
+                <div class="calendar-day-header">Martes</div>
+                <div class="calendar-day-header">Miércoles</div>
+                <div class="calendar-day-header">Jueves</div>
+                <div class="calendar-day-header">Viernes</div>
+                <div class="calendar-day-header">Sábado</div>
+
+                <!-- Semana 1 -->
+                <div class="calendar-day" data-day="Domingo, 30 de Marzo">
+                    <div class="calendar-day-number">30</div>
+                    <div class="calendar-event calendar-event-kamen-rider">Kamen Rider Geats - Ep. 30</div>
+                </div>
+                <div class="calendar-day" data-day="Lunes, 31 de Marzo">
+                    <div class="calendar-day-number">31</div>
+                </div>
+                <div class="calendar-day" data-day="Martes, 1 de Abril">
+                    <div class="calendar-day-number">1</div>
+                </div>
+                <div class="calendar-day" data-day="Miércoles, 2 de Abril">
+                    <div class="calendar-day-number">2</div>
+                    <div class="calendar-event calendar-event-super-sentai">Super Sentai - Ep. 5</div>
+                </div>
+                <div class="calendar-day" data-day="Jueves, 3 de Abril">
+                    <div class="calendar-day-number">3</div>
+                </div>
+                <div class="calendar-day" data-day="Viernes, 4 de Abril">
+                    <div class="calendar-day-number">4</div>
+                    <div class="calendar-event calendar-event-garo">Garo - Ep. 12</div>
+                </div>
+                <div class="calendar-day" data-day="Sábado, 5 de Abril">
+                    <div class="calendar-day-number">5</div>
+                    <div class="calendar-event calendar-event-ultraman">Ultraman Decker - Ep. 25</div>
+                </div>
+
+                <!-- Semana 2 -->
+                <div class="calendar-day" data-day="Domingo, 6 de Abril">
+                    <div class="calendar-day-number">6</div>
+                    <div class="calendar-event calendar-event-kamen-rider">Kamen Rider Geats - Ep. 31</div>
+                </div>
+                <div class="calendar-day" data-day="Lunes, 7 de Abril">
+                    <div class="calendar-day-number">7</div>
+                    <div class="calendar-event calendar-event-metal-heroes">Metal Heroes - Ep. 8</div>
+                </div>
+                <div class="calendar-day" data-day="Martes, 8 de Abril">
+                    <div class="calendar-day-number">8</div>
+                </div>
+                <div class="calendar-day" data-day="Miércoles, 9 de Abril">
+                    <div class="calendar-day-number">9</div>
+                    <div class="calendar-event calendar-event-super-sentai">Super Sentai - Ep. 6</div>
+                </div>
+                <div class="calendar-day" data-day="Jueves, 10 de Abril">
+                    <div class="calendar-day-number">10</div>
+                </div>
+                <div class="calendar-day" data-day="Viernes, 11 de Abril">
+                    <div class="calendar-day-number">11</div>
+                    <div class="calendar-event calendar-event-garo">Garo - Ep. 13</div>
+                </div>
+                <div class="calendar-day" data-day="Sábado, 12 de Abril">
+                    <div class="calendar-day-number">12</div>
+                    <div class="calendar-event calendar-event-ultraman">Ultraman Decker - Ep. 26</div>
+                </div>
+
+                <!-- Semana 3 -->
+                <div class="calendar-day" data-day="Domingo, 13 de Abril">
+                    <div class="calendar-day-number">13</div>
+                    <div class="calendar-event calendar-event-kamen-rider">Kamen Rider Geats - Ep. 32</div>
+                </div>
+                <div class="calendar-day" data-day="Lunes, 14 de Abril">
+                    <div class="calendar-day-number">14</div>
+                    <div class="calendar-event calendar-event-metal-heroes">Metal Heroes - Ep. 9</div>
+                </div>
+                <div class="calendar-day" data-day="Martes, 15 de Abril">
+                    <div class="calendar-day-number">15</div>
+                </div>
+                <div class="calendar-day" data-day="Miércoles, 16 de Abril">
+                    <div class="calendar-day-number">16</div>
+                    <div class="calendar-event calendar-event-super-sentai">Super Sentai - Ep. 7</div>
+                </div>
+                <div class="calendar-day" data-day="Jueves, 17 de Abril">
+                    <div class="calendar-day-number">17</div>
+                </div>
+                <div class="calendar-day" data-day="Viernes, 18 de Abril">
+                    <div class="calendar-day-number">18</div>
+                    <div class="calendar-event calendar-event-garo">Garo - Ep. 14</div>
+                </div>
+                <div class="calendar-day" data-day="Sábado, 19 de Abril">
+                    <div class="calendar-day-number">19</div>
+                    <div class="calendar-event calendar-event-ultraman">Ultraman Decker - Ep. 27</div>
+                </div>
+
+                <!-- Semana 4 -->
+                <div class="calendar-day" data-day="Domingo, 20 de Abril">
+                    <div class="calendar-day-number">20</div>
+                    <div class="calendar-event calendar-event-kamen-rider">Kamen Rider Geats - Ep. 33</div>
+                </div>
+                <div class="calendar-day" data-day="Lunes, 21 de Abril">
+                    <div class="calendar-day-number">21</div>
+                    <div class="calendar-event calendar-event-metal-heroes">Metal Heroes - Ep. 10</div>
+                </div>
+                <div class="calendar-day" data-day="Martes, 22 de Abril">
+                    <div class="calendar-day-number">22</div>
+                </div>
+                <div class="calendar-day" data-day="Miércoles, 23 de Abril">
+                    <div class="calendar-day-number">23</div>
+                    <div class="calendar-event calendar-event-super-sentai">Super Sentai - Ep. 8</div>
+                </div>
+                <div class="calendar-day" data-day="Jueves, 24 de Abril">
+                    <div class="calendar-day-number">24</div>
+                </div>
+                <div class="calendar-day" data-day="Viernes, 25 de Abril">
+                    <div class="calendar-day-number">25</div>
+                    <div class="calendar-event calendar-event-garo">Garo - Ep. 15</div>
+                </div>
+                <div class="calendar-day" data-day="Sábado, 26 de Abril">
+                    <div class="calendar-day-number">26</div>
+                    <div class="calendar-event calendar-event-ultraman">Ultraman Decker - Ep. 28</div>
+                </div>
+
+                <!-- Semana 5 -->
+                <div class="calendar-day" data-day="Domingo, 27 de Abril">
+                    <div class="calendar-day-number">27</div>
+                    <div class="calendar-event calendar-event-kamen-rider">Kamen Rider Geats - Ep. 34</div>
+                </div>
+                <div class="calendar-day" data-day="Lunes, 28 de Abril">
+                    <div class="calendar-day-number">28</div>
+                    <div class="calendar-event calendar-event-metal-heroes">Metal Heroes - Ep. 11</div>
+                </div>
+                <div class="calendar-day" data-day="Martes, 29 de Abril">
+                    <div class="calendar-day-number">29</div>
+                </div>
+                <div class="calendar-day" data-day="Miércoles, 30 de Abril">
+                    <div class="calendar-day-number">30</div>
+                    <div class="calendar-event calendar-event-super-sentai">Super Sentai - Ep. 9</div>
+                </div>
+                <div class="calendar-day" data-day="Jueves, 1 de Mayo">
+                    <div class="calendar-day-number">1</div>
+                </div>
+                <div class="calendar-day" data-day="Viernes, 2 de Mayo">
+                    <div class="calendar-day-number">2</div>
+                    <div class="calendar-event calendar-event-garo">Garo - Ep. 16</div>
+                </div>
+                <div class="calendar-day" data-day="Sábado, 3 de Mayo">
+                    <div class="calendar-day-number">3</div>
+                    <div class="calendar-event calendar-event-ultraman">Ultraman Decker - Ep. 29</div>
+                </div>
+            </div>
+        </div>
+
+      
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-placeholder"></div>
+                        <span class="logo-text">HeseiToku</span>
+                    </a>
+                    <p class="footer-description">
+                        Shadow Rangers es un sitio dedicado a compartir series tokusatsu como Super Sentai, Kamen Rider, Metal
+                        Heroes, Ultraman y Garo con la comunidad hispanohablante.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Series</h3>
+                        <ul class="footer-menu">
+                            <li><a href="super-sentai.html">Super Sentai</a></li>
+                            <li><a href="kamen-rider.html">Kamen Rider</a></li>
+                            <li><a href="metal-heroes.html">Metal Heroes</a></li>
+                            <li><a href="ultraman.html">Ultraman</a></li>
+                            <li><a href="garo.html">Garo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Enlaces</h3>
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="calendario.html" class="active">Calendario</a></li>
+                            <li><a href="#">Foro</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Legal</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Términos de servicio</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> HeseiToku. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Código específico para el calendario
+        document.addEventListener('DOMContentLoaded', function() {
+            // Navegación del calendario
+            const prevButton = document.querySelector('.calendar-nav-button:first-child');
+            const nextButton = document.querySelector('.calendar-nav-button:last-child');
+            const calendarTitle = document.querySelector('.calendar-title');
+            
+            const months = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+            let currentDate = new Date(2025, 3, 1); // Abril 2025
+            
+            function updateCalendarTitle() {
+                calendarTitle.textContent = `${months[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+            }
+            
+            prevButton.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() - 1);
+                updateCalendarTitle();
+                // Aquí se actualizaría el contenido del calendario
+            });
+            
+            nextButton.addEventListener('click', () => {
+                currentDate.setMonth(currentDate.getMonth() + 1);
+                updateCalendarTitle();
+                // Aquí se actualizaría el contenido del calendario
+            });
+        });
+    </script>
+</body>
+</html>

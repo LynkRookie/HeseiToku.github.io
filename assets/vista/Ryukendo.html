@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ryukendo - HeseiToku</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+    <link rel="icon" href="../css/img/1.png" sizes="180x180" type="image/png">
+
+</head>
+<body class="bg-black text-white">
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="menu-button mobile-only">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </button>
+                    <a href="index.html" class="logo">
+                        <img src="../css/img/1.png" alt="" width="70" height="70">
+
+                        <span class="logo-text desktop-only">HeseiToku</span>
+                    </a>
+                </div>
+                <nav class="main-nav desktop-only">
+                    <a href="../../index.html" class="nav-link">Inicio</a>
+                    <a href="super-sentai.html" class="nav-link">Super Sentai</a>
+                    <a href="kamen-rider.html" class="nav-link">Kamen Rider</a>
+                    <a href="ryukendo.html" class="nav-link active">Ryukendo</a>
+                    <div class="nav-dropdown">
+                        <button class="nav-dropdown-button">
+                            Más Series
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </button>
+                        <div class="nav-dropdown-content">
+                            <a href="metal-hero.html" class="nav-link">Metal Heroes</a>
+                            <a href="ultraman.html" class="nav-link">Ultraman</a>
+                            <a href="garo.html" class="nav-link">Garo</a>
+                        </div>
+                    </div>
+                    <a href="calendario.html" class="nav-link">Calendario</a>
+                </nav>
+                <div class="header-right">
+                    <form class="search-form desktop-only">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="search" placeholder="Buscar series..." class="search-input">
+                    </form>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                        <span class="sr-only">Notifications</span>
+                    </button>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="sr-only">Profile</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-image" style="background-image: url('https://via.placeholder.com/1920x1080?text=Ryukendo+Banner')"></div>
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <div class="category-badge">Ryukendo</div>
+                <h1 class="hero-title">Madan Senki Ryukendo</h1>
+                <p class="hero-description">
+                    La historia de Kenji Narukami, Fudou Juushirou y Koichi Michi, quienes se transforman en Ryukendo, Ryugunoh y Ryujourou para luchar contra los malvados JAMANGA que intentan escapar del Reino Mágico.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Ver ahora</button>
+                    <button class="btn btn-outline">Ver todos los episodios</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <div class="page-header">
+            <h2 class="page-title">Ryukendo</h2>
+            <div class="filter-controls">
+                <div class="select-container">
+                    <select class="filter-select">
+                        <option value="newest">Más recientes</option>
+                        <option value="oldest">Más antiguos</option>
+                        <option value="az">A-Z</option>
+                        <option value="za">Z-A</option>
+                    </select>
+                </div>
+                <button class="btn btn-outline btn-filter">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+                    Filtrar
+                </button>
+            </div>
+        </div>
+
+        <div class="category-tabs">
+            <div class="tabs-list">
+                <button class="tab-button active" data-tab="all">Todos los episodios</button>
+                <button class="tab-button" data-tab="personajes">Personajes</button>
+                <button class="tab-button" data-tab="galerias">Galerías</button>
+            </div>
+
+            <div class="tab-content active" id="all">
+                <div class="content-section">
+                    <h3 class="section-subtitle">Madan Senki Ryukendo</h3>
+                    <div class="episodes-grid">
+                        <!-- Episodes Cards -->
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+1')"></div>
+                                    <div class="episode-number">EP 1</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 1: ¡Aparece, Ryukendo!</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+2')"></div>
+                                    <div class="episode-number">EP 2</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 2: El rival, Ryugunoh</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+3')"></div>
+                                    <div class="episode-number">EP 3</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 3: La misión de GekiRyuKen</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+4')"></div>
+                                    <div class="episode-number">EP 4</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 4: El secreto de SHOT</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+5')"></div>
+                                    <div class="episode-number">EP 5</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 5: Un nuevo aliado</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="episode-card">
+                            <a href="#" class="card-link">
+                                <div class="episode-image-container">
+                                    <div class="episode-image" style="background-image: url('https://via.placeholder.com/480x270?text=Ryukendo+6')"></div>
+                                    <div class="episode-number">EP 6</div>
+                                </div>
+                                <div class="episode-content">
+                                    <div class="episode-date">2006</div>
+                                    <h3 class="episode-title">Episodio 6: El poder oculto</h3>
+                                    <p class="episode-series">Madan Senki Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="load-more-container">
+                    <button class="btn btn-outline btn-load-more" id="load-more-all">Cargar más episodios</button>
+                </div>
+            </div>
+
+            <div class="tab-content" id="personajes">
+                <div class="content-section">
+                    <h3 class="section-subtitle">Héroes</h3>
+                    <div class="poster-grid">
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Ryukendo')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Kenji Narukami / Ryukendo</h3>
+                                    <p class="poster-info">Protagonista</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Ryugunoh')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Fudou Juushirou / Ryugunoh</h3>
+                                    <p class="poster-info">Rival y aliado</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Ryujourou')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Koichi Michi / Ryujourou</h3>
+                                    <p class="poster-info">Tercer héroe</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h3 class="section-subtitle">Aliados</h3>
+                    <div class="poster-grid">
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=GekiRyuKen')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">GekiRyuKen</h3>
+                                    <p class="poster-info">Arma mágica de Ryukendo</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=KoRyuZou')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Doctor KoRyuZou</h3>
+                                    <p class="poster-info">Científico de SHOT</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="content-section">
+                    <h3 class="section-subtitle">Villanos</h3>
+                    <div class="poster-grid">
+                        <div class="poster-card">
+                            <a href="#" class="card-link">
+                                <div class="poster-image-container">
+                                    <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Conde+Bloody')"></div>
+                                </div>
+                                <div class="poster-content">
+                                    <h3 class="poster-title">Conde Bloody</h3>
+                                    <p class="poster-info">Líder de JAMANGA</p>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="galerias">
+                <div class="poster-grid">
+                    <div class="poster-card">
+                        <a href="#" class="card-link">
+                            <div class="poster-image-container">
+                                <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Galería+Armas')"></div>
+                            </div>
+                            <div class="poster-content">
+                                <h3 class="poster-title">Armas y Equipo</h3>
+                                <p class="poster-info">Galería de imágenes</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="poster-card">
+                        <a href="#" class="card-link">
+                            <div class="poster-image-container">
+                                <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Galería+Transformaciones')"></div>
+                            </div>
+                            <div class="poster-content">
+                                <h3 class="poster-title">Transformaciones</h3>
+                                <p class="poster-info">Galería de imágenes</p>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="poster-card">
+                        <a href="#" class="card-link">
+                            <div class="poster-image-container">
+                                <div class="poster-image" style="background-image: url('https://via.placeholder.com/300x450?text=Galería+Escenas')"></div>
+                            </div>
+                            <div class="poster-content">
+                                <h3 class="poster-title">Mejores Escenas</h3>
+                                <p class="poster-info">Galería de imágenes</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-placeholder"></div>
+                        <span class="logo-text">HeseiToku</span>
+                    </a>
+                    <p class="footer-description">
+                        HeseiToku es un sitio dedicado a compartir series tokusatsu como Super Sentai, Kamen Rider, Metal
+                        Heroes, Ultraman y Garo con la comunidad hispanohablante.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Series</h3>
+                        <ul class="footer-menu">
+                            <li><a href="super-sentai.html">Super Sentai</a></li>
+                            <li><a href="kamen-rider.html">Kamen Rider</a></li>
+                            <li><a href="ryukendo.html" class="active">Ryukendo</a></li>
+                            <li><a href="metal-heroes.html">Metal Heroes</a></li>
+                            <li><a href="ultraman.html">Ultraman</a></li>
+                            <li><a href="garo.html">Garo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Enlaces</h3>
+                        <ul class="footer-menu">
+                            <li><a href="../../index.html">Inicio</a></li>
+                            <li><a href="calendario.html">Calendario</a></li>
+                            <li><a href="#">Foro</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Legal</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Términos de servicio</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> HeseiToku. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
+
