@@ -1348,6 +1348,9 @@
       z-index: 10;
       gap: 1rem;
   }
+  .logotipo{
+    display: none;
+  }
   }
   
   /* Estilos para el menú móvil */
