@@ -1351,6 +1351,11 @@
   .logotipo{
     display: none;
   }
+  .footer-column1{
+    position: relative;
+    left: 11rem;
+    top: -14rem;
+  }
   }
   
   /* Estilos para el menú móvil */
