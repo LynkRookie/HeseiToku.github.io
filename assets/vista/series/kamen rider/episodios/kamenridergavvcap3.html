@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kamen Rider Gavv - Episodio 3 - HeseiToku</title>
+    <link rel="stylesheet" href="../../../../css/styles.css">
+    <style>
+        /* Estilos específicos para la página de episodio */
+        .video-container {
+            position: relative;
+            width: 100%;
+            background-color: #000;
+            aspect-ratio: 16/9;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .video-player {
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+        }
+        
+        .video-controls {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            z-index: 10;
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .video-control-button {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        
+        .video-control-button:hover {
+            background-color: rgba(229, 9, 20, 0.8);
+        }
+        
+        .video-control-button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+        
+        .video-control-button:disabled:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        
+        .episode-info {
+            background-color: var(--card-background);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .episode-title-container {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .episode-number-badge {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .episode-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+        }
+        
+        .episode-metadata {
+            display: flex;
+            gap: 1rem;
+            color: var(--text-secondary);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .episode-description {
+            font-size: 0.9375rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .related-episodes {
+            margin-top: 2rem;
+        }
+        
+        .related-episodes-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        /* Usar el mismo estilo de episodios que en el resto del sitio */
+        .episodes-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.25rem;
+        }
+        
+        @media (max-width: 768px) {
+            .episodes-row {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .episodes-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .video-controls {
+                top: 0.5rem;
+                left: 0.5rem;
+            }
+            
+            .video-control-button {
+                width: 36px;
+                height: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="sticky-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="header-left">
+                    <button class="menu-button mobile-only">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <span class="sr-only">Toggle menu</span>
+                    </button>
+                    <a href="../../../../../index.html" class="logo">
+                        <img src="../../../../css/img/1.png" alt="" width="70" height="70">
+
+                        <span class="logo-text desktop-only">HeseiToku</span>
+                    </a>
+                </div>
+                <nav class="main-nav desktop-only">
+                    <a href="../../../../../index.html" class="nav-link">Inicio</a>
+                    <a href="../../../super-sentai.html" class="nav-link">Super Sentai</a>
+                    <a href="../../../kamen-rider.html" class="nav-link active">Kamen Rider</a>
+                    <a href="../../../metal-heroes.html" class="nav-link">Metal Heroes</a>
+                    <a href="../../../ultraman.html" class="nav-link">Ultraman</a>
+                    <a href="../../../garo.html" class="nav-link">Garo</a>
+                    <a href="../../../calendario.html" class="nav-link">Calendario</a>
+                </nav>
+                <div class="header-right">
+                    <form class="search-form desktop-only">
+                        <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                        <input type="search" placeholder="Buscar series..." class="search-input">
+                    </form>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+                        <span class="sr-only">Notifications</span>
+                    </button>
+                    <button class="icon-button">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        <span class="sr-only">Profile</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container main-content">
+        <!-- Video Player -->
+        <div class="video-container">
+            <div class="video-controls">
+                <a href="../gavv-detalle.html" class="video-control-button" title="Volver a la lista de episodios">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                </a>
+                <a href="../episodios/kamenridergavvcap2.html"id="prev-episode" class="video-control-button" title="Episodio anterior" disabled>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="15 18 9 12 15 6"></polyline></svg>
+                </a>
+
+                <a href="../episodios/kamenridergavvcap4.html" id="next-episode" class="video-control-button" title="Episodio siguiente">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polyline points="9 18 15 12 9 6"></polyline></svg>
+                </a>
+            </div>
+            <video class="video-player" controls autoplay poster="/placeholder.svg?height=720&width=1280">
+                <source src="../../../../css/img/videos/gavv_03.mp4" type="video/mp4">
+                Tu navegador no soporta el elemento de video.
+            </video>
+        </div>
+
+        <!-- Episode Info -->
+        <div class="episode-info">
+            <div class="episode-title-container">
+                <span class="episode-number-badge">Episodio 3</span>
+                <h1 class="episode-title">El Golpe de Soda es un Placer Culpable</h1>
+            </div>
+            <div class="episode-metadata">
+                <span class="episode-date">03 Sep 2022</span>
+                <span class="episode-series">Kamen Rider Gavv</span>
+                <span class="episode-duration">24 min</span>
+            </div>
+            <p class="episode-description">
+                Ace Ukiyo se encuentra con un misterioso hombre llamado Tycoon, quien le invita a participar en el Desire Grand Prix, una competencia donde los ganadores pueden obtener cualquier deseo. Ace acepta y se convierte en Kamen Rider Geats, enfrentándose a otros participantes y a extrañas criaturas llamadas Jyamato.
+            </p>
+            <div class="episode-tags">
+                <span class="tag">Kamen Rider</span>
+                <span class="tag">Tokusatsu</span>
+                <span class="tag">Acción</span>
+            </div>
+        </div>
+
+        <!-- Related Episodes -->
+        <div class="related-episodes">
+            <h2 class="section-subtitle">Episodios relacionados</h2>
+            <div class="episodes-row">
+                <!-- Episodio 2 -->
+                <a href="kamenridergavvcap2.html" class="episode-card">
+                    <div class="episode-image-container">
+                        <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
+
+                        <div class="episode-number">Episodio 2</div>
+                    </div>
+                    <div class="episode-content">
+                        <div class="episode-date">10 Sep 2022</div>
+                        <h3 class="episode-title">Chips Crujientes de Felicidad</h3>
+                        <div class="episode-series">Kamen Rider Gavv</div>
+                    </div>
+                </a>
+                
+                <!-- Episodio 3 -->
+                <a href="kamenridergavvcap3.html" class="episode-card">
+                    <div class="episode-image-container">
+                        <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
+
+                        <div class="episode-number s">Episodio 3</div>
+                    </div>
+                    <div class="episode-content">
+                        <div class="episode-date">17 Sep 2022</div>
+                        <h3 class="episode-title">El Golpe de Soda es un Placer Culpable</h3>
+                        <div class="episode-series">Kamen Rider Gavv</div>
+                    </div>
+                </a>
+                
+                <!-- Episodio 4 -->
+                <a href="kamenridergavvcap4.html" class="episode-card">
+                    <div class="episode-image-container">
+                        <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
+
+                        <div class="episode-number">Episodio 4</div>
+                    </div>
+                    <div class="episode-content">
+                        <div class="episode-date">24 Sep 2022</div>
+                        <h3 class="episode-title">¡Más Malvaviscos, por Favor!</h3>
+                        <div class="episode-series">Kamen Rider Gavv</div>
+                    </div>
+                </a>
+                
+                <!-- Episodio 5 -->
+                <a href="episodio.html?serie=kamen-rider-geats&ep=5" class="episode-card">
+                    <div class="episode-image-container">
+                        <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
+
+                        <div class="episode-number">Episodio 5</div>
+                    </div>
+                    <div class="episode-content">
+                        <div class="episode-date">01 Oct 2022</div>
+                        <h3 class="episode-title">La verdad sobre Buffa</h3>
+                        <div class="episode-series">Kamen Rider Geats</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <a href="index.html" class="footer-logo">
+                        <img src="../../../../css/img/1.png" alt="" width="70" height="70">
+                        <span class="logo-text">HeseiToku</span>
+                    </a>
+                    <p class="footer-description">
+                        HeseiToku es un sitio dedicado a compartir series tokusatsu como Super Sentai, Kamen Rider, Metal
+                        Heroes, Ultraman y Garo con la comunidad hispanohablante.
+                    </p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Series</h3>
+                        <ul class="footer-menu">
+                            <li><a href="super-sentai.html">Super Sentai</a></li>
+                            <li><a href="kamen-rider.html">Kamen Rider</a></li>
+                            <li><a href="metal-heroes.html">Metal Heroes</a></li>
+                            <li><a href="ultraman.html">Ultraman</a></li>
+                            <li><a href="garo.html">Garo</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Enlaces</h3>
+                        <ul class="footer-menu">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="calendario.html">Calendario</a></li>
+                            <li><a href="#">Foro</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3 class="footer-heading">Legal</h3>
+                        <ul class="footer-menu">
+                            <li><a href="#">Términos de servicio</a></li>
+                            <li><a href="#">Política de privacidad</a></li>
+                            <li><a href="#">DMCA</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">
+                    © <span id="current-year"></span> HeseiToku. Todos los derechos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../../../../js/main.js"></script>
+    <script>
+        // Código específico para la página de episodio
+        document.addEventListener('DOMContentLoaded', function() {
+            // Obtener parámetros de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const serie = urlParams.get('serie') || 'kamen-rider-geats';
+            let episodio = parseInt(urlParams.get('ep') || '1');
+            
+            // Actualizar título de la página
+            document.title = `${serie.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Episodio ${episodio} - Shadow Rangers`;
+            
+            // Actualizar elementos de la página
+            const episodeNumberBadge = document.querySelector('.episode-number-badge');
+            const episodeTitle = document.querySelector('.episode-title');
+            const prevEpisodeButton = document.getElementById('prev-episode');
+            const nextEpisodeButton = document.getElementById('next-episode');
+            
+            if (episodeNumberBadge) {
+                episodeNumberBadge.textContent = `Episodio ${episodio}`;
+            }
+            
+            // Configurar botones de navegación
+            if (prevEpisodeButton && nextEpisodeButton) {
+                // Deshabilitar botón anterior si es el primer episodio
+                prevEpisodeButton.disabled = episodio <= 1;
+                
+                // Deshabilitar botón siguiente si es el último episodio (asumimos 50 episodios máximo)
+                nextEpisodeButton.disabled = episodio >= 50;
+                
+                // Configurar eventos de clic
+                prevEpisodeButton.addEventListener('click', function() {
+                    if (episodio > 1) {
+                        window.location.href = `episodio.html?serie=${serie}&ep=${episodio - 1}`;
+                    }
+                });
+                
+                nextEpisodeButton.addEventListener('click', function() {
+                    window.location.href = `episodio.html?serie=${serie}&ep=${episodio + 1}`;
+                });
+            }
+            
+            // Simular carga de video
+            const videoPlayer = document.querySelector('.video-player');
+            if (videoPlayer) {
+                // Establecer un poster personalizado basado en el episodio
+                videoPlayer.poster = `/placeholder.svg?height=720&width=1280&text=Episodio ${episodio}`;
+                
+                // Simular carga de video (en un sitio real, aquí se cargaría la URL del video)
+                setTimeout(() => {
+                    console.log(`Cargando video para ${serie} - Episodio ${episodio}`);
+                }, 500);
+            }
+            
+            // Actualizar enlaces de episodios relacionados
+            const episodeLinks = document.querySelectorAll('.episode-card');
+            episodeLinks.forEach((link, index) => {
+                const relatedEp = episodio + index + 1;
+                link.href = `episodio.html?serie=${serie}&ep=${relatedEp}`;
+                
+                const epNumber = link.querySelector('.episode-number');
+                if (epNumber) {
+                    epNumber.textContent = `Episodio ${relatedEp}`;
+                }
+                
+                const epTitle = link.querySelector('.episode-title');
+                if (epTitle) {
+                    // Mantener el título original pero actualizar el número si es necesario
+                    epTitle.textContent = epTitle.textContent.replace(/\d+/, relatedEp);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
