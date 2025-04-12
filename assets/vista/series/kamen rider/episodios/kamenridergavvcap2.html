@@ -195,12 +195,12 @@
                 <a href="../gavv-detalle.html" class="video-control-button" title="Volver a la lista de episodios">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
                 </a>
-                <a href="../episodios/kamenridergavvcap1.html"id="prev-episode" class="video-control-button" title="Episodio anterior" disabled>
+                <a href="kamenridergavvcap1.html" class="video-control-button" title="Episodio anterior">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="15 18 9 12 15 6"></polyline></svg>
                 </a>
 
-                <a href="../episodios/kamenridergavvcap3.html" id="next-episode" class="video-control-button" title="Episodio siguiente">
+                <a href="kamenridergavvcap3.html" class="video-control-button" title="Episodio siguiente">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <polyline points="9 18 15 12 9 6"></polyline></svg>
                 </a>
@@ -218,7 +218,7 @@
                 <h1 class="episode-title">Chips Crujientes de Felicidad</h1>
             </div>
             <div class="episode-metadata">
-                <span class="episode-date">03 Sep 2022</span>
+                <span class="episode-date">10 Sep 2022</span>
                 <span class="episode-series">Kamen Rider Gavv</span>
                 <span class="episode-duration">24 min</span>
             </div>
@@ -236,16 +236,15 @@
         <div class="related-episodes">
             <h2 class="section-subtitle">Episodios relacionados</h2>
             <div class="episodes-row">
-                <!-- Episodio 2 -->
-                <a href="kamenridergavvcap2.html" class="episode-card">
+                <!-- Episodio 1 -->
+                <a href="kamenridergavvcap1.html" class="episode-card">
                     <div class="episode-image-container">
                         <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
-
-                        <div class="episode-number">Episodio 2</div>
+                        <div class="episode-number">Episodio 1</div>
                     </div>
                     <div class="episode-content">
-                        <div class="episode-date">10 Sep 2022</div>
-                        <h3 class="episode-title">Chips Crujientes de Felicidad</h3>
+                        <div class="episode-date">03 Sep 2022</div>
+                        <h3 class="episode-title">Un Kamen Rider de Snacks</h3>
                         <div class="episode-series">Kamen Rider Gavv</div>
                     </div>
                 </a>
@@ -254,7 +253,6 @@
                 <a href="kamenridergavvcap3.html" class="episode-card">
                     <div class="episode-image-container">
                         <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
-
                         <div class="episode-number">Episodio 3</div>
                     </div>
                     <div class="episode-content">
@@ -268,7 +266,6 @@
                 <a href="kamenridergavvcap4.html" class="episode-card">
                     <div class="episode-image-container">
                         <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
-
                         <div class="episode-number">Episodio 4</div>
                     </div>
                     <div class="episode-content">
@@ -282,13 +279,12 @@
                 <a href="kamenridergavvcap5.html" class="episode-card">
                     <div class="episode-image-container">
                         <div class="episode-image" style="background-image: url('../../../../css/img/kamenridergavv.png');"></div>
-
                         <div class="episode-number">Episodio 5</div>
                     </div>
                     <div class="episode-content">
                         <div class="episode-date">01 Oct 2022</div>
-                        <h3 class="episode-title">La verdad sobre Buffa</h3>
-                        <div class="episode-series">Kamen Rider Geats</div>
+                        <h3 class="episode-title">Dulce Venganza</h3>
+                        <div class="episode-series">Kamen Rider Gavv</div>
                     </div>
                 </a>
             </div>
@@ -341,84 +337,15 @@
             </div>
             <div class="footer-bottom">
                 <p class="copyright">
-                    © <span id="current-year"></span> HeseiToku. Todos los derechos reservados.
+                    © <span id="current-year">2023</span> HeseiToku. Todos los derechos reservados.
                 </p>
             </div>
         </div>
     </footer>
 
-    <script src="../../../../js/main.js"></script>
     <script>
-        // Código específico para la página de episodio
-        document.addEventListener('DOMContentLoaded', function() {
-            // Obtener parámetros de la URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const serie = urlParams.get('serie') || 'kamen-rider-geats';
-            let episodio = parseInt(urlParams.get('ep') || '1');
-            
-            // Actualizar título de la página
-            document.title = `${serie.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase())} - Episodio ${episodio} - Shadow Rangers`;
-            
-            // Actualizar elementos de la página
-            const episodeNumberBadge = document.querySelector('.episode-number-badge');
-            const episodeTitle = document.querySelector('.episode-title');
-            const prevEpisodeButton = document.getElementById('prev-episode');
-            const nextEpisodeButton = document.getElementById('next-episode');
-            
-            if (episodeNumberBadge) {
-                episodeNumberBadge.textContent = `Episodio ${episodio}`;
-            }
-            
-            // Configurar botones de navegación
-            if (prevEpisodeButton && nextEpisodeButton) {
-                // Deshabilitar botón anterior si es el primer episodio
-                prevEpisodeButton.disabled = episodio <= 1;
-                
-                // Deshabilitar botón siguiente si es el último episodio (asumimos 50 episodios máximo)
-                nextEpisodeButton.disabled = episodio >= 50;
-                
-                // Configurar eventos de clic
-                prevEpisodeButton.addEventListener('click', function() {
-                    if (episodio > 1) {
-                        window.location.href = `episodio.html?serie=${serie}&ep=${episodio - 1}`;
-                    }
-                });
-                
-                nextEpisodeButton.addEventListener('click', function() {
-                    window.location.href = `episodio.html?serie=${serie}&ep=${episodio + 1}`;
-                });
-            }
-            
-            // Simular carga de video
-            const videoPlayer = document.querySelector('.video-player');
-            if (videoPlayer) {
-                // Establecer un poster personalizado basado en el episodio
-                videoPlayer.poster = `/placeholder.svg?height=720&width=1280&text=Episodio ${episodio}`;
-                
-                // Simular carga de video (en un sitio real, aquí se cargaría la URL del video)
-                setTimeout(() => {
-                    console.log(`Cargando video para ${serie} - Episodio ${episodio}`);
-                }, 500);
-            }
-            
-            // Actualizar enlaces de episodios relacionados
-            const episodeLinks = document.querySelectorAll('.episode-card');
-            episodeLinks.forEach((link, index) => {
-                const relatedEp = episodio + index + 1;
-                link.href = `episodio.html?serie=${serie}&ep=${relatedEp}`;
-                
-                const epNumber = link.querySelector('.episode-number');
-                if (epNumber) {
-                    epNumber.textContent = `Episodio ${relatedEp}`;
-                }
-                
-                const epTitle = link.querySelector('.episode-title');
-                if (epTitle) {
-                    // Mantener el título original pero actualizar el número si es necesario
-                    epTitle.textContent = epTitle.textContent.replace(/\d+/, relatedEp);
-                }
-            });
-        });
+        // Establecer el año actual en el footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
